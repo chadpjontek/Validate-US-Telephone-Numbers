@@ -1,6 +1,6 @@
 function telephoneCheck(str) {
   // regex to validate number (2 options for with and without parentheses)
-  var re = /^[1]?[ ]?[0-9]{3}[-]?[ ]?[0-9]{3}[-]?[ ]?[0-9]{4}$|^[1]?[ ]?\([0-9]{3}\)[ ]?[0-9]{3}[-]?[ ]?[0-9]{4}$/;
+  var re = /^(?:1\s?)?(?:\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
   if (str.match(re) === null) {
     return false;
   }
